@@ -1,0 +1,45 @@
+@import '../../assets/styles/imports';
+
+$btnPath: '../../assets/styles/composers/_buttons.scss';
+
+.mainTitle {
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.usersWrapper {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.headers,
+.userList {
+  line-height: 50px;
+  text-indent: 20px;
+}
+
+.headers {
+  background-color: $greenPrimary;
+  color: $white;
+}
+
+.headerLabels {
+  text-align: left;
+}
+// TODO B: Check style on table content
+.userList {
+  border: 1px solid $grey;
+}
+
+.userRow:nth-child(odd) {
+  background-color: $greyLight;
+}
+
+.userEditBtn,
+.userDeleteBtn {
+  composes: editBtn from $btnPath;
+}
+
+.usersPerPage {
+  margin-top: 20px;
+}

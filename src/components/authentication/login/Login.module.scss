@@ -1,0 +1,30 @@
+@import '../../../assets/styles/imports';
+@import '../../../assets/styles/composers/positioning';
+
+$positioningPath: '../../../assets/styles/composers/_positioning.scss';
+$btnPath: '../../../assets/styles/composers/_buttons.scss';
+
+.loginWrapper {
+  composes: totalCenter from $positioningPath;
+  width: 550px;
+
+  @include tabletPortrait {
+    width: 70%;
+  }
+}
+
+.smallText {
+  display: inherit;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.registerLink {
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.loginAuthBtn {
+  composes: authBtn from $btnPath;
+  float: right;
+}

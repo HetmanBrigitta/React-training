@@ -1,0 +1,41 @@
+@import '../../assets/styles/imports';
+
+.dateWrapper {
+  padding: 20px 0;
+
+  input {
+    width: 150px;
+    margin-left: 10px;
+    padding: 10px;
+    text-indent: 25px;
+    border: 2px solid;
+    border-color: $greyDark $greyLight $greyLight $greyDark;
+    border-radius: 6px;
+    background-color: transparent;
+
+    @include tabletPortrait {
+      margin: 0;
+    }
+  }
+}
+
+.customLabel {
+  position: relative;
+
+  @include tabletPortrait {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &::after {
+    @include icon-content($calendarIcon);
+    top: 0;
+    left: 125px;
+    z-index: -1;
+
+    @include tabletPortrait {
+      top: 36px;
+      left: 10px;
+    }
+  }
+}

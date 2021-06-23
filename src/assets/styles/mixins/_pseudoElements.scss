@@ -1,0 +1,9 @@
+@mixin icon-content($img-url) {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  background: $img-url no-repeat center;
+  background-size: cover;
+}

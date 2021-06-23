@@ -1,0 +1,30 @@
+@import '../../assets/styles/imports';
+
+.paginationWrapper {
+  float: right;
+  padding: 10px;
+
+  a {
+    display: flex;
+    padding: 8px 10px;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.arrow {
+  color: #303030;
+}
+
+.arrowDisabled {
+  cursor: default;
+  opacity: .5;
+}
+
+.activePage {
+  background-color: $greenPrimary;
+
+  a {
+    color: $white;
+  }
+}

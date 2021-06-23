@@ -1,0 +1,22 @@
+@import '../../../assets/styles/imports';
+
+$btnPath: '../../../assets/styles/composers/_buttons.scss';
+
+.registerWrapper {
+  width: 550px;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  @include tabletPortrait {
+    width: calc(100% - 80px);
+  }
+}
+
+.registerAuthBtn {
+  composes: authBtn from $btnPath;
+  float: right;
+
+  @include mobileLarge {
+    width: 100%;
+  }
+}

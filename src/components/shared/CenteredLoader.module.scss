@@ -1,0 +1,13 @@
+@import '../../assets/styles/imports';
+
+$positioningPath: '../../assets/styles/composers/_positioning.scss';
+
+.loaderWrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.centerLoader {
+  composes: totalCenter from $positioningPath;
+}

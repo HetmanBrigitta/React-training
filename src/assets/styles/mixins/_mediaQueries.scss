@@ -1,0 +1,37 @@
+@import '../variables/index';
+
+@mixin desktopMedium {
+  @media all and (max-width: $desktopMediumBreakpoint) {
+    @content;
+  }
+}
+
+@mixin desktopSmall {
+  @media all and (max-width: $desktopSmallBreakpoint) {
+    @content;
+  }
+}
+
+@mixin tabletLandscape {
+  @media all and (max-width: $tabletLandscapeBreakpoint) {
+    @content;
+  }
+}
+
+@mixin tabletPortrait {
+  @media all and (max-width: $tabletPortrait) {
+    @content;
+  }
+}
+
+@mixin mobileLarge {
+  @media all and (max-width: $mobileLargeBreakpoint) {
+    @content;
+  }
+}
+
+@mixin mobileSmall {
+  @media all and (max-width: $mobileSmallBreakpoint) {
+    @content;
+  }
+}

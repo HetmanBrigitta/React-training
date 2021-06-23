@@ -1,0 +1,18 @@
+@import '../../assets/styles/imports';
+
+.customLabel {
+  display: flex;
+  margin: 10px 0;
+}
+
+.customInput {
+  width: calc(100% - 25px);
+  padding: 10px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 0 30px $white inset;
+}
+
+input[type='file'] {
+  width: 100%;
+  padding: 10px 0 20px;
+}
