@@ -5,20 +5,28 @@
   align-items: center;
   border-bottom: 1px solid $grey;
   margin-bottom: 50px;
+}
 
-  h2 {
-    font-weight: 400;
-  }
+.navTitle {
+  font-weight: 400;
+}
 
-  a {
-    font-size: 14px;
-    font-weight: 400;
-    color: $black;
-    margin-left: 20px;
+.inactive {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 20px;
+  color: $greyPrimary;
+
+  @include on-event {
+    color: $greenPrimary;
   }
 }
 
-.activeLink {
-  font-weight: 600;
+.logOut {
+  border: 0;
+  background-color: transparent;
+}
+
+.active {
   color: $greenPrimary;
 }

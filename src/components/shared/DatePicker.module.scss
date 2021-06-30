@@ -29,8 +29,8 @@
 
   &::after {
     @include icon-content($calendarIcon);
-    top: 0;
-    left: 125px;
+    top: -1px;
+    left: 118px;
     z-index: -1;
 
     @include tabletPortrait {

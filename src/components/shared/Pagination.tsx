@@ -5,7 +5,6 @@ import style from './Pagination.module.scss';
 
 interface IPagination {
   totalNumberOfPages: number;
-  size: number;
   onPageChange: (selectedItem: { selected: number }) => void;
   page: number;
 }
@@ -17,19 +16,25 @@ const Pagination: FC<IPagination> = ({ totalNumberOfPages, onPageChange, page }:
     marginPagesDisplayed={0}
     onPageChange={onPageChange}
     activeClassName={style.activePage}
-    containerClassName={style.paginationWrapper}
+    containerClassName={`${style.paginationWrapper} ${style.flex}`}
+    pageClassName={style.listStyle}
+    previousClassName={style.listStyle}
+    nextClassName={style.listStyle}
+    pageLinkClassName={style.customLink}
+    previousLinkClassName={style.customLink}
+    nextLinkClassName={style.customLink}
+    activeLinkClassName={style.customActiveLink}
     previousLabel={
-      totalNumberOfPages !== 1 ? (
+      totalNumberOfPages > 1 ? (
         <span className={`${style.arrow} ${page === 0 && style.arrowDisabled}`}>Previous</span>
       ) : null
     }
     nextLabel={
-      totalNumberOfPages !== 1 ? (
-        // TODO B: Check why totalNumberOfPages is 0
+      totalNumberOfPages > 1 ? (
         <span
           className={`
             ${style.arrow}
-            ${page === totalNumberOfPages && console.log(totalNumberOfPages) && style.arrowDisabled}
+            ${page === totalNumberOfPages - 1 && style.arrowDisabled}
           `}>
           Next
         </span>

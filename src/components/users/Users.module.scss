@@ -24,15 +24,26 @@ $btnPath: '../../assets/styles/composers/_buttons.scss';
 }
 
 .headerLabels {
-  text-align: left;
-}
-// TODO B: Check style on table content
-.userList {
-  border: 1px solid $grey;
+  text-align: center;
+  text-indent: 0;
+
+  &:nth-last-of-type(5),
+  &:nth-last-of-type(6),
+  &:nth-last-of-type(7),
+  &:nth-last-of-type(8) {
+    text-align: initial;
+    text-indent: 20px;
+  }
 }
 
-.userRow:nth-child(odd) {
-  background-color: $greyLight;
+.userRow {
+  td {
+    border-bottom: 1px solid $grey;
+  }
+
+  &:hover {
+    background-color: $greyLight;
+  }
 }
 
 .userEditBtn,
@@ -42,4 +53,13 @@ $btnPath: '../../assets/styles/composers/_buttons.scss';
 
 .usersPerPage {
   margin-top: 20px;
+}
+
+.editWrapper,
+.deleteWrapper,
+.noContent,
+.hasContent:nth-last-of-type(3),
+.hasContent:nth-last-of-type(4) {
+  text-align: center;
+  text-indent: 0;
 }

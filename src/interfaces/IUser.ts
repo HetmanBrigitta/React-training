@@ -1,4 +1,6 @@
-import { IRoles } from './IRoles';
+export interface IKeyObject {
+  [key: string]: string;
+}
 
 export interface IUsers {
   total: number | null;
@@ -25,15 +27,20 @@ export interface IUser {
   createdAt: string;
 }
 
-export interface IUserTableLabels {
-  firstName: string;
-  lastName: string;
-  role: IRoles[];
+export interface IUserUpdate {
+  id: string;
   email: string;
   birthDate: string;
-  createdAt: string;
+  gender: number;
+  bio: string;
+  address: string;
+  picture: string;
 }
 
-export interface IKeyObject {
-  [key: string]: string;
+export interface IUserUpdateInitialValues {
+  email: string | undefined;
+  birthDate: string | undefined;
+  gender: number | undefined;
+  bio: string | undefined;
+  address: string | undefined;
 }

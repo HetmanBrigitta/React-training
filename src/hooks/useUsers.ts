@@ -18,7 +18,7 @@ const useUsers = (activePage: number): TReturn => {
       const { data } = await userApi.getUser(activePage);
 
       if (data.total) {
-        setTotalNumberOfPages(data.total / 10);
+        setTotalNumberOfPages(Math.floor(data.total / 10) + (data.total % 10 === 0 ? 0 : 1));
       }
 
       const copy = data?.users?.map(
@@ -42,7 +42,7 @@ const useUsers = (activePage: number): TReturn => {
 
   useEffect(() => {
     getUsers();
-  }, [activePage]);
+  }, [activePage, roles]);
 
   return [users, totalNumberOfPages, isLoading];
 };

@@ -4,6 +4,5 @@ export default {
   users: '/users',
   account: '/account',
   hotels: '/hotel',
-  bookings: '/bookings',
-  logout: '/logout'
+  bookings: '/bookings'
 };

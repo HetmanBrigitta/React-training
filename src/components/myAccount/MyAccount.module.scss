@@ -1,0 +1,23 @@
+@import '../../assets/styles/imports';
+
+.accountWrapper {
+  margin: 0 25%;
+  padding-top: 100px;
+
+  @include tabletPortrait {
+    margin: 0 30px;
+  }
+}
+
+.userMainInfo {
+  justify-content: space-between;
+
+  @include tabletPortrait {
+    justify-content: inherit;
+  }
+}
+
+.accountBtnWrapper {
+  justify-content: space-evenly;
+}
+

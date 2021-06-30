@@ -40,12 +40,16 @@ const Users: FC = () => {
                 <tr className={style.userRow} key={uuid()}>
                   <>
                     {Object.keys(user).map((key) => (
-                      <td key={uuid()}>{user[`${key}`]}</td>
+                      <td
+                        key={uuid()}
+                        className={user[`${key}`] ? style.hasContent : style.noContent}>
+                        {user[`${key}`] ? user[`${key}`] : '-'}
+                      </td>
                     ))}
-                    <td>
+                    <td className={style.editWrapper}>
                       <button className={style.userEditBtn}>Edit</button>
                     </td>
-                    <td>
+                    <td className={style.deleteWrapper}>
                       <button className={style.userDeleteBtn}>Delete</button>
                     </td>
                   </>
@@ -66,7 +70,6 @@ const Users: FC = () => {
       </table>
       <Pagination
         totalNumberOfPages={totalNumberOfPages}
-        size={10}
         page={activePage}
         onPageChange={onPageChange}
       />

@@ -15,6 +15,9 @@ const authReducer = createSlice({
   reducers: {
     setUserInfo: (state, { payload }: PayloadAction<IUser>) => {
       state.userInfo = payload;
+    },
+    resetUserInfo: (state) => {
+      state.userInfo = null;
     }
   }
 });
