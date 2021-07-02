@@ -3,21 +3,27 @@ import { FieldProps } from 'formik';
 
 import style from './CustomInput.module.scss';
 
-type TProps = FieldProps & { type: string; label?: string };
+type TProps = FieldProps & { type: string; label?: string; disabled?: boolean };
 
 const CustomInput: FC<TProps> = ({
   field: { name },
   field,
   form: { errors, touched },
   type,
-  label
+  label,
+  disabled = false
 }) => {
   const checkError = errors && errors[name] && touched && touched[name];
 
   return (
     <div>
       {label && <label className={style.customLabel}>{label}</label>}
-      <input {...field} type={type} className={style.customInput} />
+      <input
+        {...field}
+        disabled={disabled}
+        type={type}
+        className={disabled ? style.disabledInput : style.customInput}
+      />
       {checkError && <label className={style.error}>{errors[name]}</label>}
     </div>
   );

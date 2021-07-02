@@ -10,6 +10,7 @@ type TReturn = [IRoles[], boolean];
 interface IResponse {
   response: {
     status: string;
+    message: string;
   };
 }
 

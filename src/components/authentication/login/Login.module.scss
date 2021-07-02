@@ -25,6 +25,6 @@ $btnPath: '../../../assets/styles/composers/_buttons.scss';
 }
 
 .loginAuthBtn {
-  composes: authBtn from $btnPath;
+  composes: primaryBtn from $btnPath;
   float: right;
 }

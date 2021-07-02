@@ -2,13 +2,13 @@ export interface IKeyObject {
   [key: string]: string;
 }
 
+export interface IUserState {
+  userInfo: IUser | null;
+}
+
 export interface IUsers {
   total: number | null;
   users: IUser[];
-}
-
-export interface IUserState {
-  userInfo: IUser | null;
 }
 
 export interface IUser {
@@ -27,20 +27,13 @@ export interface IUser {
   createdAt: string;
 }
 
-export interface IUserUpdate {
-  id: string;
+export type IUserUpdate = Omit<IUserUpdateRequest, 'id'>
+
+export interface IUserUpdateRequest {
+  id: number;
   email: string;
   birthDate: string;
   gender: number;
   bio: string;
   address: string;
-  picture: string;
-}
-
-export interface IUserUpdateInitialValues {
-  email: string | undefined;
-  birthDate: string | undefined;
-  gender: number | undefined;
-  bio: string | undefined;
-  address: string | undefined;
 }

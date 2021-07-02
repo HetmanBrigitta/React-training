@@ -4,7 +4,6 @@ $btnPath: '../../assets/styles/composers/_buttons.scss';
 
 .mainTitle {
   font-weight: 400;
-  margin-bottom: 50px;
 }
 
 .usersWrapper {
@@ -48,7 +47,7 @@ $btnPath: '../../assets/styles/composers/_buttons.scss';
 
 .userEditBtn,
 .userDeleteBtn {
-  composes: editBtn from $btnPath;
+  composes: secondaryBtn from $btnPath;
 }
 
 .usersPerPage {

@@ -11,3 +11,13 @@
   border: 2px solid;
   border-color: $greyDark $greyLight $greyLight $greyDark;
 }
+
+.disabledTextAreaWrapper {
+  position: relative;
+
+  &::after {
+    @include hide-content(8px, 12px, $white);
+    right: 59px;
+    bottom: 0;
+  }
+}

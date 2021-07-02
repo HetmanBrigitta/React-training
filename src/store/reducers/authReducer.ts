@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IUserState, IUser } from '../../interfaces/IUser';
+import { IUserState, IUser, IUserUpdate } from '../../interfaces/IUser';
 import JwtDecode from 'jwt-decode';
 
 export const authReducerInitialState: IUserState = {
@@ -15,6 +15,9 @@ const authReducer = createSlice({
   reducers: {
     setUserInfo: (state, { payload }: PayloadAction<IUser>) => {
       state.userInfo = payload;
+    },
+    updateUserInfo: (state, { payload }: PayloadAction<IUserUpdate>) => {
+      state = { ...state, userInfo: { ...state.userInfo!, ...payload } };
     },
     resetUserInfo: (state) => {
       state.userInfo = null;

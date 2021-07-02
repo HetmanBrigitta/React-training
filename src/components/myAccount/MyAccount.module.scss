@@ -1,23 +1,45 @@
 @import '../../assets/styles/imports';
 
+$btnPath: '../../assets/styles/composers/_buttons.scss';
+$positioningPath: '../../assets/styles/composers/_positioning.scss';
+
 .accountWrapper {
-  margin: 0 25%;
-  padding-top: 100px;
+  justify-content: center;
 
   @include tabletPortrait {
-    margin: 0 30px;
+    flex-direction: column;
+  }
+}
+
+.backBtn {
+  composes: secondaryBtn from $btnPath;
+}
+
+.backDisabled {
+  composes: secondaryDisabled from $btnPath;
+}
+
+.userMainInfo,
+.accountWrapper > form {
+  @include tabletPortrait {
+    margin: 0 auto;
+    width: 203px;
   }
 }
 
 .userMainInfo {
-  justify-content: space-between;
+  padding-right: 100px;
 
   @include tabletPortrait {
-    justify-content: inherit;
+    padding: 0;
   }
 }
 
 .accountBtnWrapper {
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 
+.accountMainBtn {
+  composes: primaryBtn from $btnPath;
+}

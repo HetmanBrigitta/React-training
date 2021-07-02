@@ -13,7 +13,7 @@ $btnPath: '../../../assets/styles/composers/_buttons.scss';
 }
 
 .registerAuthBtn {
-  composes: authBtn from $btnPath;
+  composes: primaryBtn from $btnPath;
   float: right;
 
   @include mobileLarge {

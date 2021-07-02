@@ -28,11 +28,19 @@ button {
   cursor: pointer;
 }
 
-.error {
+.error,
+.success {
   display: flex;
   margin-top: 5px;
   font-weight: 400;
+}
+
+.error {
   color: $errorColor;
+}
+
+.success {
+  color: $successColor;
 }
 
 .serverError {
@@ -49,6 +57,7 @@ button {
 .mainTitle {
   text-align: center;
   font-size: 36px;
+  margin-bottom: 50px;
 
   @include mobileLarge {
     font-size: 24px;
@@ -57,4 +66,10 @@ button {
 
 .flex {
   display: flex;
+}
+
+.disabledInput,
+.disabledTextArea {
+  border: 0;
+  background-color: transparent;
 }

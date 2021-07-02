@@ -21,7 +21,6 @@ const Users: FC = () => {
   return (
     <div className={style.mainWrapper}>
       <Navbar />
-      {/*<NavLink to={routePaths.login}>Back</NavLink>*/}
       <h1 className={style.mainTitle}>User Management</h1>
       <table className={style.usersWrapper}>
         <thead className={style.headers}>
